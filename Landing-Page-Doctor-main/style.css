@@ -1,0 +1,514 @@
+html{
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color:#28be97;
+    --seconde-color:#22a17f;
+    --third-color:rgb(245, 245, 245);
+    --text-color:#777;
+    --bg-color:#e7f7f6;
+    --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+    --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
+
+/* Nav-bar Start */
+.nav-bar .navbar-light .navbar-nav .active>.nav-link{
+    color: var(--main-color);
+}
+.nav-bar .navbar-light .navbar-nav .nav-link:hover{
+    color: var(--seconde-color);
+    transition: color 0.4s;
+}
+.nav-bar .btn-success{
+    background-color: var(--main-color);
+}
+.nav-bar .btn-success:hover{
+    background-color: var(--seconde-color);
+}
+.nav-bar .navbar-light .navbar-toggler{
+    padding: 10px;
+    border-radius: 50%;
+}
+.navbar-light {
+    background-color: white;
+    border-bottom:1px solid #e5e5e5;
+}
+/* Nav-bar End */
+
+
+
+/* Header Start */
+.main-header{
+    margin-top: 100px;
+}
+.main-header .animation-effect{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.main-header .animation-effect .effect-1{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    animation: upToDown  linear 3s infinite alternate;
+}
+@keyframes upToDown {
+    0%   {left:80%; top:90%;}
+    100% {left:80%; top:94%;}
+}
+
+.main-header .animation-effect .effect-1 div{
+    margin: 2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.main-header .animation-effect .effect-2{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #22a17f;
+    animation: scaleTogel  linear 3s infinite alternate;
+}
+@keyframes scaleTogel {
+    0%   {}
+    50%  {scale: 1;}
+    100% {scale: 1.6;}
+}
+.main-header .main-header_text  .section-header{
+    font-size: 45px;
+}
+.main-header .main-header_text  .section-header span{
+    font-weight: 600;
+}
+.main-header .main-header_text  .section-body p{
+    font-size: 20px;
+    color:var(--text-color);
+}
+.main-header .main-header_text  .section-action button{
+    background-color: var(--main-color);
+    margin-bottom: 50px;
+}
+.main-header .main-header_text  .section-action button:hover{
+    background-color: var(--seconde-color);
+}
+
+.main-header .main-header_image{
+    position: relative;
+    margin-left: 50px;
+}
+
+.main-header .main-header_image .box-lift{
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    height: 70px;
+    width: 170px;
+    border-radius: 5px;
+    box-shadow: var(--outer-shadow);
+    z-index: 100;
+}
+.main-header .main-header_image .box-lift .media .icon{
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    margin-right: 5px;
+    height: 40px;
+    width: 40px;
+    color: var(--main-color);
+    line-height: 40px;
+    text-align: center;
+}
+.main-header .main-header_image .box-lift .media .media-body p {
+    font-size: 13px;
+    color: var(--text-color);
+    margin-top: -10px;
+}
+.main-header .main-header_image .circle-effect{
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    z-index: -1;
+}
+.main-header .main-header_image .box-rigth{
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    height: 70px;
+    width: 170px;
+    border-radius: 5px;
+    box-shadow: var(--outer-shadow);
+    z-index: 100;
+}
+.main-header .main-header_image .box-rigth p{
+    font-size: 13px;
+}
+.main-header .main-header_image .box-rigth p .icon{
+    font-size: 14px;
+    color: var(--main-color);
+}
+/* Screen Extra large */
+@media (max-width: 1200px) {
+    .main-header .main-header_image .circle-effect {
+        left: 45%;
+    }
+    
+.main-header .animation-effect .effect-1{
+    top: 90%;
+    left: 90%;
+}
+@keyframes upToDown {
+    0%   {left:90%; top:90%;}
+    100% {left:90%; top:94%;}
+}
+
+.main-header .animation-effect .effect-1 div{
+    margin: 2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.main-header .animation-effect .effect-2{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #22a17f;
+    animation: scaleTogel  linear 3s infinite alternate;
+}
+@keyframes scaleTogel {
+    0%   {}
+    50%  {scale: 1;}
+    100% {scale: 1.6;}
+}
+}
+
+/* Screen Large */
+@media (max-width: 992px) {
+    .main-header .main-header_image .circle-effect {
+        left: 29%;
+    }
+    
+.main-header .animation-effect .effect-1{
+    left: 70%;
+}
+@keyframes upToDown {
+    0%   {left: 70%; top:90%;}
+    100% {left: 70%; top:94%;}
+}
+.main-header .animation-effect .effect-2{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+}
+}
+
+/* Screen Medium */
+@media (max-width: 768px) {
+    .main-header .main-header_image .circle-effect {
+        left: 37%;
+    }
+    .main-header .animation-effect .effect-2{
+        top: 75%;
+        left: 10%;
+    }
+
+}
+
+/* Screen Small */
+@media (max-width: 575px) {
+    .main-header .main-header_image .circle-effect {
+        left: 42%;
+    }
+
+    .main-header .animation-effect .effect-1{
+        top: 88%;
+        left: 80%;
+    }
+    @keyframes upToDown {
+        0%   {left:80%; top:88%;}
+        100% {left:80%; top:90%;}
+    }
+
+    .main-header .animation-effect .effect-2{
+        left: 15%;
+    }
+}
+
+/* Header End */
+
+
+
+
+/* About Us Start  */
+.about{
+    padding: 50px 0;
+
+}
+.about .about_text .section-header {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 40px;
+}
+.about .about_text .section-header > span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+.about .about_text .section-header > img {
+    margin-top: -10px;
+}
+.about .about_text .section-action > button {
+    background-color: var(--main-color);
+    margin-bottom:30px ;
+}
+.about .about_text .section-action > button:hover{
+    background-color: var(--seconde-color);
+}
+
+/* About Us Start  */
+
+/* Services Start */
+.services{
+    padding: 50px 0;
+    background-color: var(--third-color);
+}
+.services .body-section .nav-pills .nav-link{
+    background-color: none;
+    margin-bottom: 5px;
+}
+.services .body-section .nav-pills .nav-link:hover{
+    background-color: var(--main-color);
+    transition: background-color 0.5s;
+}
+.services .body-section .nav-pills .nav-link.active{
+    background-color: var(--main-color);
+    color: white;
+}
+.services .body-section .tab-content{
+    background-color: white;
+    padding: 40px;
+    
+}
+/* Services End */
+
+
+/* Team Start */
+.team{
+    padding: 50px 0;
+}
+.team .body-section  .card  {
+    border-radius: 5px;
+}
+.team .body-section  .card:hover{
+    border: 1px solid #22a17f;
+}
+.team .body-section  .card .card-body {
+    background-color: var(--third-color);
+}
+.team .body-section  .card .card-body .image {
+    background-color: red;
+    height: 10px;
+}
+.team .body-section  .card .card-body .icon {
+    color: black;
+    background-color: none;
+    margin-right: 20px;
+    padding: 10px;
+}
+.team .body-section  .card .card-body .icon:hover {
+    color: white;
+    background-color: var(--main-color);
+    transition: background-color 0.7s ,color 0.7s;
+}
+
+/* Screen Large */
+@media (max-width: 992px )and (min-width: 768px) {
+    .team .body-section  .card .card-body .icon {
+        margin-right: 5px;
+        padding: 5px;
+    }
+}
+
+/* Team End */
+
+/* Facility Start */
+.facility{
+    padding: 50px 0;
+    background-color: var(--third-color);
+}
+.facility .body-section .card{
+    padding: 30px;
+    position: relative;
+    bottom: 0px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: none;
+}
+.facility .body-section .card:hover{
+    position: relative;
+    bottom: 10px;
+    box-shadow: var(--outer-shadow);
+    transition: bottom 0.4s ,box-shadow 0.4s;
+}
+.facility .body-section .card .icon{
+    color: var(--main-color);
+    font-size: 30px;
+}
+.facility .body-section .card .content{
+    font-size: 17px;
+    color: var(--text-color);
+}
+/* Facility End */
+
+
+/*  Partners Start  */
+.partners{
+    padding: 50px 0;
+    background-color: var(--third-color);
+}
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+.logo-img {
+	height: 150px;
+    width: 150px;
+	object-fit: fill;
+    padding: 0;
+}
+.logo-img:hover {
+background-color: var(--main-color);
+padding: 10px 0 0 10px;
+transition: padding 0.3s;
+}
+
+
+
+/* large - display 6 */
+@media (min-width: 992px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+    transform: translateX(15%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+    display: none;
+    }
+}
+
+@media ( max-width: 991px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+/*  Partners End  */
+
+
+/* Contact Us Start */
+.contact{
+    padding: 50px 0;
+}
+.contact .body-section .info .media .icon{
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    color: var(--main-color);
+    line-height: 45px;
+    text-align: center;
+}
+.contact .body-section .info .media .media-body p {
+    font-size: 13px;
+    color: var(--text-color);
+    margin-top: -10px;
+}
+.contact  .map,.contact .map iframe{
+    width: 100%;
+    height: 100%;
+}
+/* Contact Us End */
+
+/* Footer Start */
+footer .info span{
+    color: var(--main-color);
+}
+footer .icons .icon a{
+    color: var(--text-color) ;
+    margin-right: 20px;
+    font-size: 30px;
+}
+footer .icons .icon a:hover{
+    color: var(--main-color) ;
+    transition: color 0.5s;
+}
+/* Footer End */
+
+/* Button Go To Top Start */
+.to-top {
+    background: var(--main-color);
+    color:white;
+    
+    position: fixed;
+    bottom: 16px;
+    right:32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+}
+.to-top:hover {
+    text-decoration: none;
+    background: var(--seconde-color);
+    color:white;
+}
+.to-top.active {
+bottom:32px;
+pointer-events: auto;
+opacity:1;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* Button Go To Top End */
+
